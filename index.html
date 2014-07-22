@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>The Mixin - 23 July 2014</title>
+
+		<meta name="description" content="A talk on the true power and prowess of talk beyond the tech stuff">
+		<meta name="author" content="Claudina Sarahe">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/radical.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- Slide 0: Title Card -->
+				<section data-state="title-slide">
+					<h1>Components</h1>
+					<p>
+						<small><a href="http://itsmisscs.me">Claudina Sarahe</a> / <a href="http://twitter.com/itsmisscs">@itsmisscs</a></small>
+					</p>
+
+					<aside class="notes">
+
+					</aside>
+
+				</section>
+
+				<!-- Slide Group: Intro -->
+				<section data-state="about-slide">
+					<header class="fragment">
+						<h2>@itsmisscs</h2>
+						<h3>Webbing since 2005</h3>
+						<img src="img/me.jpg">
+					</header>
+					<ul>
+						<li>Radical</li>
+						<li>Entrepreneur</li>
+						<li>Dreams of being a polyglot and filling up a passport</li>
+						<li>Vinyl lover</li>
+						<li>Whiskey, Bourbon, Scotch, Tequila</li>
+						<li>Tries everything</li>
+						<li>E/INTP</li>
+						<li>Sun in Leo, Scorpio ascendent, Capricorn Moon, Venus in Libra</li>
+						<li>Backsquats, Kettlebells, Deadlifts FTW</li>
+						<li>Born in Long Beach, CA</li>
+						<li>Raised in Iowa City, IA</li>
+						<li>Wellesley College dropout</li>
+						<li>Bacon lover</li>
+						<li>Considering a marathon</li>
+						<li>Fails a lot</li>
+						<li>Dominican</li>
+						<li>Sudanese</li>
+						<li>Queer</li>
+					</ul>
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section data-state="oddbird-slide">
+					<h2 class="is-hidden"><a href="oddbird.net">OddBird</a></h2>
+					<p>OddBirds thrive on shared ideas & playful collaboration, crossing disciplines, breaking boundaries, and eating dessert with the soup spoon. From open-source tools like Django, Compass, and Susy to web applications for Mozilla and Junyo, or experiments in digital storytelling — we love molding ideas into experiences for humans.</p>
+					<p><small>Psst...We're looking for a designer that likes eating dessert with a soup spoon or spork.</small></p>
+
+					<aside class="notes">
+ 							I work at an awesome company called OddBird. Sadly, I’m not a Meyer, though sometimes I wish I was.
+					</aside>
+				</section>
+
+				<section data-state="gothamsass-slide">
+					<h2>New York Sass & Compass Meetup</h2>
+					<h3>Est. April 2012</h3>
+					<ul>
+						<li>588 members</li>
+						<li>27 Meetups</li>
+					</ul>
+					<p><small>Big thanks to <a href="http://pivotallabs.com/">Pivotal Labs</a> for monthly support and <a href="nwc.co">New Work City</a> for letting us test out viability</small></p>
+
+					<aside class="notes">
+						In the Sass community, I organize the New York City Sass and Compass Meetup (@GothamSass).
+					</aside>
+				</section>
+
+				<section data-state="sassconf-slide">
+					<h2>SassConf</h2>
+					<h3>October 2-4, 2014 | NYC</h3>
+					<p>A conference for front-end developers and designers that love Sass and are passionate about building a better, more beautiful web.</p>
+					<p><a href="sassconf.com">We want you to talk or lead a workshop</a></p>
+
+					<aside class="notes">
+						I’m co-creator of SassConf. This years conference will be in NYC from October 2-4th.  This year it’ll be a full day of workshops, a single track conference, and community/sasshack day. Call for papers are open! Please submit. We are working to guarantee a full-ride for our speakers.
+					</aside>
+
+				</section>
+
+				<section data-state="sassisawesome-slide">
+					<ul>
+						<li class="fragment">
+							<a href="">
+								<h2>JSON</h2>
+								<p>the best data format</p>  
+							</a>
+						</li>
+						<li class="fragment">
+							<a href="">
+								<h2>HTML</h2>
+								<p>because without it what can our css do</p>  
+							</a>
+						</li>
+						<li class="fragment">
+							<a href="">
+								<h2>RHIZOMES</h2>
+								<p>creating places and spaces of encounter of unforeseeabilities</p>  
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<!-- GROUP: JSON-->
+				<section>
+
+					<section data-state="json">
+						<header>
+							<h1>JSON</h1>
+							<h2>Data-interchange format</h2>
+						</header>
+
+						<aside class="notes">
+							While there are many reasons to love Sass one of its powers I've
+							been fascinated with are maps, the feature that aligns sass with
+							most common programming languages
+						</aside>
+					</section>
+
+					<section>
+						<pre><code>
+							  "basecolors": {
+							    "black": "#333333",
+							    "pink": "#bf4040",
+							    "yellow": "#ffc300",
+							    "orange": "#f16e22",
+							    "cyan": "#73cede",
+							    "blue": "#1ca0d9",
+							    "green": "#90bb35"
+							  }
+						</code></pre>
+
+						<pre><code>
+							$colors: (
+							  'template': 'color.html',
+							  'basecolors': (
+							    'black': hsl(0, 0%, 20%),
+							    'pink': hsl(360, 50%, 50%),
+							    'yellow': hsl(46, 100%, 50%),
+							    'orange': hsl(22, 88%, 54%),
+							    'cyan': hsl(189, 62%, 66%),
+							    'blue': hsl(198, 77%, 48%),
+							    'green': hsl(79, 56%, 47%),
+							    )
+							);
+						</code></pre>
+
+						<aside class="notes">
+							Maps are simple a key value pair. They exist in almost every
+							programming language. A collection of name/value pairs. In various
+							languages, this is realized as an object, record, struct, dictionary,
+							hash table, keyed list, or associative array.
+
+							JSON is a data format that is interchangeable with programming languages.
+							It is based on two These are universal data structures.
+							Virtually all modern programming languages support them in one form or another.
+							It makes sense that a data format that is interchangeable with
+							programming languages also be based on these structures.
+
+							Not to mention how databases built on JSON.
+						</aside>
+
+					</section>
+
+					<section data-state="sassyjson">
+						<h1><a href="https://github.com/ezekg/SassyExport">SassyExport</a></h1>
+						<p>Lightweight Compass extension that allows you
+							to export an encoded Sass map into an external JSON file.</p>
+
+						<aside class="notes">
+
+						</aside>
+
+					</section>
+
+
+				</section>
+
+
+				<!-- Slide Group: JS & jQuery -->
+				<section data-state="html">
+					<header>
+						<h1>Materials matter</h1>
+						<h2>Pick a good templating language</h2>
+
+						<ul>
+							<li><a href="">Jade</a> <a href="http://jade-lang.com/reference/#mixins">mixins</a></li>
+							<li><a href="jinja.pocoo.org/docs/templates/">Jinja2</a> <a href="">macros</a></li>
+						</ul>
+					</header>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section data-state="thankyou-slide">
+					<h1>Thank You!</h1>
+					<div class="fragment fade-in">
+						<h3>And come to SassConf</h3>
+						<p>$75 off SassConf Tickets. Discount code: greysquirrel. SassConf.com</p>
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				slideNumber: false,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+    		transitionSpeed: 'default', // default/fast/slow
+    		backgroundTransition: 'slide', // default/none/slide/concave/convex/zoom
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+	        { src: 'socket.io/socket.io.js', async: true },
+	        { src: 'plugin/notes-server/client.js', async: true }
+				]
+			});
+
+		</script>
+
+    <script src="http://localhost:35729/livereload.js"></script>
+
+	</body>
+</html>

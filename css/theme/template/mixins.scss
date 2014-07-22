@@ -1,0 +1,56 @@
+@mixin vertical-gradient( $top, $bottom ) {
+	background: $top;
+	background: -moz-linear-gradient( top, $top 0%, $bottom 100% );
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom) );
+	background: -webkit-linear-gradient( top, $top 0%, $bottom 100% );
+	background: -o-linear-gradient( top, $top 0%, $bottom 100% );
+	background: -ms-linear-gradient( top, $top 0%, $bottom 100% );
+	background: linear-gradient( top, $top 0%, $bottom 100% );
+}
+
+@mixin horizontal-gradient( $top, $bottom ) {
+	background: $top;
+	background: -moz-linear-gradient( left, $top 0%, $bottom 100% );
+	background: -webkit-gradient( linear, left top, right top, color-stop(0%,$top), color-stop(100%,$bottom) );
+	background: -webkit-linear-gradient( left, $top 0%, $bottom 100% );
+	background: -o-linear-gradient( left, $top 0%, $bottom 100% );
+	background: -ms-linear-gradient( left, $top 0%, $bottom 100% );
+	background: linear-gradient( left, $top 0%, $bottom 100% );
+}
+
+@mixin radial-gradient( $outer, $inner, $type: circle ) {
+	background: $outer;
+	background: -moz-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+	background: -webkit-gradient( radial, center center, 0px, center center, 100%, color-stop(0%,$inner), color-stop(100%,$outer) );
+	background: -webkit-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+	background: -o-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+	background: -ms-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+	background: radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+}
+
+// Font Face from Bourbon.io
+// https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
+
+// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    @if $asset-pipeline == true {
+      src: font-url('#{$file-path}.eot');
+      src: font-url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+           font-url('#{$file-path}.woff')                format('woff'),
+           font-url('#{$file-path}.ttf')                 format('truetype'),
+           font-url('#{$file-path}.svg##{$font-family}') format('svg');
+    } @else {
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+           url('#{$file-path}.woff')                     format('woff'),
+           url('#{$file-path}.ttf')                      format('truetype'),
+           url('#{$file-path}.svg##{$font-family}')      format('svg');
+    }
+  }
+}
