@@ -57,19 +57,16 @@ $sasspink: #c69;
 $white: #fff;
 
 // Override theme settings (see ../template/settings.scss)
-$mainColor: $base00;
+$mainColor: $base1;
 $headingColor: $base3;
 $headingFont: 'BullenBold';
 $headingTextShadow: none;
-$backgroundColor: $magenta;
-$linkColor: $base3;
+$backgroundColor: $base03;
+$linkColor: $blue;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: $magenta;
 
-// Background generator
-// @mixin bodyBackground() {
-// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
-// }
+// Bad!
 
 .is-hidden {
 	display: none
@@ -103,14 +100,31 @@ $selectionBackgroundColor: $magenta;
 	text-align: justify;
 }
 
-
-.trends figure {
-	background: $white;
-	border-radius: 1em;
+.reveal pre {
+	font-size: .95em;
 }
 
 .reveal {
 
+	.magenta {
+		color: $magenta;
+	}
+
+	.red {
+		color: $red;
+	}
+
+	.violet {
+		color: $violet;
+	}
+
+	.orange {
+		color: $orange;
+	}
+
+	.yellow {
+		color: $yellow;
+	}
 
 	time {
 		font-style: italic;
@@ -119,15 +133,12 @@ $selectionBackgroundColor: $magenta;
 		display: block;
 	}
 
-	figure {background: $white;}
-
 	figcaption {
-		font-size: .5em;
+		font-size: .85em;
 	}
 
 	q {
-	 	background: rgba($magenta, 1);
-	 	color: $white;
+	 	color: $yellow;
 	 	font-family: "BullenItalic";
 	 	font-size: 1.25em;
 	 	line-height: 1.4em;
@@ -168,38 +179,18 @@ $selectionBackgroundColor: $magenta;
 	}
 
 	.oddbird-slide & {
-		background: $orange;
-		p { color: $base3;}
-		small {color: $base02;}
+		background: $blue;
+		p {
+			background: white;
+		}
 	}
 
-	.gothamsass-slide & {
-		background: $base02;
-	}
 
 	.sassconf-slide & {
 		background: #510059;
 		h2, h3 {color: #ff0064;}
 		p a {color: #d300e6;}
 		p {color: $base3;}
-	}
-
-	.onceuponatime-slide & {
-		background: $base03;
-		q {font-size: 1.1em;}
-	}
-
-	.story-slide & {
-		background: $orange;
-	}
-
-	.iquit-slide & {
-		background: $blue;
-		h2 {text-transform: uppercase;}
-	}
-
-	.idontcare-slide & {
-		background: $blue;
 	}
 
 	.sassisawesome-slide & {
@@ -221,33 +212,24 @@ $selectionBackgroundColor: $magenta;
 		}
 	}
 
+	.triptych & {
+
+		.pane {
+			float: left;
+			width: 33%;
+		}
+	}
+
+	.diptych & {
+		.pane {
+			float: left;
+			width: 50%;
+		}
+	}
+
 	.revolutions-slide & {
 		background: $red;
 		h2 { color: $base2;}
-	}
-
-	.trendsjs-slide & {
-		background: $base02;
-		h2 {color: $base2;}
-	}
-
-	.trendscss-slide & {
-		background: $base03;
-		h2 {color: $base2;}
-	}
-
-	.jqueryblog-slide & {
-		background: $green;
-		header * {font-size: 1em;}
-	}
-
-	.networks-slide & {
-		background: $green;
-	}
-
-	.recap-slide & {
-		background: $magenta;
-		h2, li {color: $base3;}
 	}
 
 	.thankyou-slide & {

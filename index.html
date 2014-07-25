@@ -4,9 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>The Mixin - 23 July 2014</title>
-
-		<meta name="description" content="A talk on the true power and prowess of talk beyond the tech stuff">
+		<meta name="description" content="A talk on components">
 		<meta name="author" content="Claudina Sarahe">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -44,14 +42,20 @@
 			<div class="slides">
 
 				<!-- Slide 0: Title Card -->
-				<section data-state="title-slide">
-					<h1>Components</h1>
+				<section>
+					<h1>On Components</h1>
+					<h2 class="orange">adopting a coponentized mindset</h2>
 					<p>
-						<small><a href="http://itsmisscs.me">Claudina Sarahe</a> / <a href="http://twitter.com/itsmisscs">@itsmisscs</a></small>
+						<a href="http://itsmisscs.me">Claudina Sarahe</a> / <a href="http://twitter.com/itsmisscs">@itsmisscs</a>
 					</p>
 
 					<aside class="notes">
+						Hello, San Francisco. Thank you so much to Jina and the organizers
+						of The Mixin for putting on this lovely gathering and for inviting
+						me to speak. It is truly an honor to be here.
 
+						Chris, thank you for designing community into Sass thus allowing us
+						to be here today, connecting, jiving together.
 					</aside>
 
 				</section>
@@ -84,31 +88,22 @@
 						<li>Queer</li>
 					</ul>
 					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-state="oddbird-slide">
-					<h2 class="is-hidden"><a href="oddbird.net">OddBird</a></h2>
-					<p>OddBirds thrive on shared ideas & playful collaboration, crossing disciplines, breaking boundaries, and eating dessert with the soup spoon. From open-source tools like Django, Compass, and Susy to web applications for Mozilla and Junyo, or experiments in digital storytelling — we love molding ideas into experiences for humans.</p>
-					<p><small>Psst...We're looking for a designer that likes eating dessert with a soup spoon or spork.</small></p>
-
-					<aside class="notes">
- 							I work at an awesome company called OddBird. Sadly, I’m not a Meyer, though sometimes I wish I was.
+						My name is Claudina Sarahe. I'm a NYC based entrepreneur and front-end
+						architect.
 					</aside>
 				</section>
 
 				<section data-state="gothamsass-slide">
 					<h2>New York Sass & Compass Meetup</h2>
-					<h3>Est. April 2012</h3>
+					<h3 class="magenta">Est. April 2012</h3>
 					<ul>
-						<li>588 members</li>
-						<li>27 Meetups</li>
+						<li>626 members</li>
+						<li>29 Meetups</li>
 					</ul>
 					<p><small>Big thanks to <a href="http://pivotallabs.com/">Pivotal Labs</a> for monthly support and <a href="nwc.co">New Work City</a> for letting us test out viability</small></p>
 
 					<aside class="notes">
-						In the Sass community, I organize the New York City Sass and Compass Meetup (@GothamSass).
+						I organize the New York City Sass and Compass Meetup (@GothamSass).
 					</aside>
 				</section>
 
@@ -116,153 +111,525 @@
 					<h2>SassConf</h2>
 					<h3>October 2-4, 2014 | NYC</h3>
 					<p>A conference for front-end developers and designers that love Sass and are passionate about building a better, more beautiful web.</p>
-					<p><a href="sassconf.com">We want you to talk or lead a workshop</a></p>
+					<p><a href="sassconf.com">Tickets</a></p>
 
 					<aside class="notes">
-						I’m co-creator of SassConf. This years conference will be in NYC from October 2-4th.  This year it’ll be a full day of workshops, a single track conference, and community/sasshack day. Call for papers are open! Please submit. We are working to guarantee a full-ride for our speakers.
+						I’m co-creator of SassConf. This years conference will again be in NYC
+						from October 2-4th. This year there's a full day of workshops,
+						a single track conference, and community/sasshack day.
+
+						Jina will be leading a workshop, along with Elyse Holladay,
+						co-organizer of the newest Sass Meetup ATXSass.
+
+						Due to a gracious sponsor we've been able to standardize pricing.
+						Tickets are $475.
 					</aside>
-
 				</section>
 
-				<section data-state="sassisawesome-slide">
-					<ul>
-						<li class="fragment">
-							<a href="">
-								<h2>JSON</h2>
-								<p>the best data format</p>  
-							</a>
-						</li>
-						<li class="fragment">
-							<a href="">
-								<h2>HTML</h2>
-								<p>because without it what can our css do</p>  
-							</a>
-						</li>
-						<li class="fragment">
-							<a href="">
-								<h2>RHIZOMES</h2>
-								<p>creating places and spaces of encounter of unforeseeabilities</p>  
-							</a>
-						</li>
-					</ul>
+				<section data-state="oddbird-slide" data-background="img/birds.png" data-background-size="100%" data-background-position="bottom">
+					<div class="fragment is-visible">
+					<h2>
+						OddBirds thrive on shared ideas & playful collaboration, crossing
+						disciplines, breaking boundaries, and eating dessert with the soup spoon.
+					</h2>
+					<p class="orange">
+						From open-source tools like Django, Compass, and Susy to web applications
+						for Mozilla and Junyo, or experiments in digital storytelling —
+						we love molding ideas into experiences for humans.
+					</p>
+					<p class="orange"><em>Psst...We're looking for a designer that likes eating dessert
+						with a soup spoon or spork.</em></p>
+					</div>
+					<aside class="notes">
+						I work at a awesome little company called OddBird with some of the
+						most amazing, talented, and warm-hearted people ever.
+
+						You may recognize one of birds, Eric Suzanne, who spoke at the last
+						SF Mixin.
+
+						The number one question I've received since joining OddBird, is what do you do
+						at Oddbird. Because of our NDAs I can't talk or demo our projects (until they are public)
+
+						Today I'm going to talk about a components of what I do.
+
+						At OddBird, I've primarily been working as front-end architect. Eric is resonsible
+						for UX/Design and I am responsible for implementation.
+
+						One of my first tasks at OddBird was to document our front-end patterns (components).
+					</aside>
 				</section>
+
+				<section>
+					<p><q>
+						The way we presently architect the front-end is very strange and even a
+						bit broken. In many instances you're either copying huge chunks of HTML
+						out of some doc and then pasting that into your app (Bootstrap, Foundation, etc.),
+						or you're sprinkling the page with jQuery plugins that have to be
+						configured using JavaScript.
+						<b>
+							In an ideal scenario, the HTML language would be expressive enough to
+							create complex UI widgets and also extensible so that we,
+							the developers, could fill in any gaps with our own tags.
+						</b>
+					</q></p>
+					<!-- turn this into hcard -->
+					<p><cite>Rob Dodson,
+						<em><a href="http://css-tricks.com/modular-future-web-components/">
+						A Guide to Web Components</a></em>
+					</cite></p>
+
+					<aside class="notes">
+						When I first started looking at it, I realized our code was broken. We
+						were copying huge chunks of HTML around; similar patterns would suffer from
+						the slightly different variation.
+
+						I wanted a way to take a component, or chunk of HTML + classes, and
+						easily render it in our documentation and also have a way to.
+
+						Consequently, I become obsessed with HTML. I was feeling a bit sheepish
+						about my new love considering that Sass is the new thing,
+					</aside>
+				</section>
+
+				<section>
+					<p><q>[Web] Components are ushering in a HTML renaissance, encouraging us to
+					think about how we can bring back the declarative simplicity of HTML
+					to the components we write today.<q><p>
+					<p>Componenent allow us to bundle markup and styles into custom HTML elements that
+						fully encapsulate all of their HTML, CSS and behaviors (JS).</p>
+
+
+					<aside class="notes">
+						but then
+						I came across Web Componenents and breathed a sigh of relief. I was on track,
+						even though I wasn't using Web Components. Our goal's are the the same: build elements that are (potentially) more
+						maintainable and more encapsulated.
+
+						Web components are of the browser, they tap into the ShadowDom and have more capabilities.
+
+						We don't have to use Web Components to apply the principles of building
+						HTML widgets, building encapsulated objects.
+						In fact, the Ember project goes so far as to create their own component object
+						that keeps aware of the spec progress. they fully intended to integrate once
+						web components become a standard
+
+						As we know all to well with Sass adoption,
+						any new standard can be controversial and in the case of Web Components
+						it does seems that they are especially polarizing.
+
+						Let's look at how we can begin to prepare ourselves for the not so distant future.
+					</aside>
+				</section>
+
+				<!-- Slide Group: HTML -->
+				<section>
+
+					<section data-state="html">
+
+						<h1>Materials matter</h1>
+						<h2 class="orange">Pick a robust templating language</h2>
+
+						<p>Templating languages are to HTML what pre-processors are to CSS</p>
+
+
+						<aside class="notes">
+							Prior to starting at OddBird I never
+ 							thought much about my templating language. Usually just worked
+ 							in the constraints of the project. I enjoyed HAML because it meant
+ 							writing less HTML cruft.
+
+ 							HTML, much like CSS, is a flat language.
+
+ 							As Rob wrote "In an ideal scenario,
+ 							the HTML language would be expressive enough to
+							create complex UI widgets and also extensible so that we,
+							the developers, could fill in any gaps with our own tags."
+
+							Enter HTML templating languages. not all templating languages are
+							created equal. We were using Django's templating engine which has
+							the common concept of partials.
+
+							I quickly realized that Django wasn't going to cut it even with partials.
+						</aside>
+					</section>
+
+					<section data-state="partials">
+						<h1>Partials</h1>
+						<p class="red">will only get you part way there</p>
+
+						<aside class="notes">
+							Much like Sass partials, HTML partials feel more like a way of grouping/
+							separating like code to create more manageable files.
+
+							Partials fall short when you try to design reseuable components.
+							There's no easy way to include a partial within a partial
+							....not to mention the performance implications.
+
+							I needed something that was more like a function...
+							Because I primarily build complex apps,
+							not simple sites, I am always striving to be as DRY as possible.
+						</aside>
+					</section>
+
+					<section>
+						<h1>Hello, <b class="orange">macros</b></h1>
+						<p>Macros are comparable with functions in regular programming languages.</p>
+<pre><code>
+{% for c in people %}
+  {{ people_macros.render_summary(c) }}
+{% endfor %}
+</code></pre>
+
+<img src="img/rendered-macro.png">
+
+						<aside class="notes">
+							Macros on the other hand are like mixins. In fact Jade calls them
+							mixins.
+
+							Creating reusueable macros is a similar mental model to building
+							a web component (from what I've read).
+						</aside>
+					</section>
+
+					<section>
+						<h1>Jinja2</h1>
+						<p class="orange">a modern and designer friendly templating language for Python,
+							modelled after Django’s templates.</p>
+
+							<ul>
+								<li><a href="jinja.pocoo.org/docs/templates/">Jinja2</a> <a href="">macros</a></li>
+								<li><a href="http://mozilla.github.io/nunjucks/">Nunjucks</a></li>
+							</ul>
+
+
+						<aside class="notes">
+							A bit of research led me to Jinja, a templating language that reminds me
+							of Liquid, which the the templating language for Jekyll static site generator
+							created by Shopify.
+
+							since I'm handing off projects, I try to be aware of learning curve and don't
+							want to go completely new, like Jade.
+						</aside>
+
+					</section>
+
+
+					<section>
+						<h1><b class="orange">Dissecting</b> macros</h1>
+
+							<ul>
+								<li>
+									Example:
+									<a href="https://gist.github.com/misscs/b828906a1ac9da7d5b05">
+										Buttoned Up
+									</a>
+								</li>
+								<li>
+									Example:
+									<a href="https://gist.github.com/misscs/163bdc66444694660b50">
+										Microformats hcard
+									</a>
+								</li>
+							</ul>
+
+						<aside class="notes">
+							Let's take a look at some macros.
+						</aside>
+					</section>
+
+					<section>
+						<h1 class="is-hidden">Nunjucks</h1>
+						<p><q>“Nunjucks has allowed us to port all of our existing templates from
+						a Django project to something that's easier to manage.
+						By moving our templates to the client, transfer sizes are reduced
+						and page responsiveness increases significantly.
+						<strong>Our API supplies data, meaning we can decouple testing the
+						front-end from testing the back-end.</strong>
+						Nunjucks has made our app feel native.”</q></p>
+						<p><cite>– Matt Basta, Firefox Marketplace team</cite></p>
+
+						<aside class="notes">
+							We use both Jinja and Nunjucks. We replace dour handlebars templates
+							with nunjucks allowing us to reuse our macros in both HTML and JS (ajax)
+						</aside>
+					</section>
+
+				</section><!-- // HTML Group -->
+
+				<section>
+					<h1>Single Source of Truth</h1>
+					<h2 class="orange"><b>D</b>on't <b>R</b>epeat <b>Y</b>ourself</h2>
+					<p>Structure your information models such that every data element is stored exactly once</p>
+					<aside class="notes">
+						What we are striving for is not new or original.
+						Duplication (inadvertent or purposeful duplication)
+						can lead to maintenance nightmares, poor factoring, and
+						logical contradictions. AVOID IT
+
+
+						Macros allow us to have one Single Origin or Truth for our HTML.
+
+						Sweet. So now we had a much faster site. Like Mozilla, we saw drasitic
+						improvements in performance and compilation times.
+
+						But there was still a problem. We use Sass maps for configuration, from
+						colors, to typography, to sizing. We found ourselves duplicating our Sass
+						code in our styleguide.I took a look at our python dictionaries and
+						realized that they looked just like sass maps.
+
+						But what could we use for Sass.
+
+						Enter JSON
+					</aside>
+				</section>
+
+					<section data-state="diptych">
+						<h1 class="is-hidden">Duplication is bad</h1>
+
+<div class="pane"><pre><code>
+$colors: (
+  'basecolors': (
+    'black': hsl(0, 0%, 15%),
+    'pink': hsl(360, 50%, 50%),
+    'yellow': hsl(46, 100%, 50%),
+    'orange': hsl(22, 88%, 54%),
+    'cyan': hsl(189, 62%, 66%),
+    'blue': hsl(198, 77%, 48%),
+    'green': hsl(79, 56%, 65%),
+    )
+);
+	</code></pre>
+	<h3>Sass</h3>
+</div>
+<div class="pane"><pre><code>
+{% set colors = {
+    'base': {
+      'white': '#fff',
+      'black': 'hsl(0, 0%, 20%)',
+      'gray': 'hsl(75, 14%, 95%)',
+      'yellow': 'hsl(46, 100%, 50%)',
+      'orange': 'hsl(22, 88%, 54%)',
+      'cyan': 'hsl(189, 62%, 66%)',
+      'blue': 'hsl(198, 77%, 48%)',
+      'green': 'hsl(79, 56%, 47%)',
+    }
+  }
+%}
+	</code></pre>
+	<h3>Python</h3>
+</div>
+</section>
 
 				<!-- GROUP: JSON-->
 				<section>
 
-					<section data-state="json">
-						<header>
-							<h1>JSON</h1>
-							<h2>Data-interchange format</h2>
-						</header>
+					<section>
+						<h1>Hi, JSON</h1>
+						<h2 class="magenta">you so Sassy</h2>
+						<figure>
+							<img src="img/json.jpg" alt="The rapper Json">
+							<figcaption>Json, the rapper</figcaption>
+						</figure>
 
 						<aside class="notes">
-							While there are many reasons to love Sass one of its powers I've
-							been fascinated with are maps, the feature that aligns sass with
-							most common programming languages
+							JSON is a data format that is interchangeable with programming languages.
+							It is based on two universal data structures:
+								* collection of name/value pairs
+								* Lists/Arrays.
+
+							These are universal data structures. It makes sense that a data format
+							that is interchangeable with programming languages also be based
+							on these structures.
+						</aside>
+					</section>
+
+					<section data-state="triptych">
+						<h1 class="is-hidden">Universal data structures</h1>
+<div class="pane"><pre><code>
+{
+  "basecolors": {
+    "black": "#262626",
+    "pink": "#bf4040",
+    "yellow": "#ffc300",
+    "orange": "#f16e22",
+    "cyan": "#73cede",
+    "blue": "#1ca0d9",
+    "green": "#b8d874"
+  }
+}
+	</code></pre>
+	<h3>JSON</h3>
+</div>
+<div class="pane"><pre><code>
+$colors: (
+  'basecolors': (
+    'black': hsl(0, 0%, 15%),
+    'pink': hsl(360, 50%, 50%),
+    'yellow': hsl(46, 100%, 50%),
+    'orange': hsl(22, 88%, 54%),
+    'cyan': hsl(189, 62%, 66%),
+    'blue': hsl(198, 77%, 48%),
+    'green': hsl(79, 56%, 65%),
+    )
+);
+	</code></pre>
+	<h3>Sass</h3>
+</div>
+<div class="pane"><pre><code>
+{% set colors = {
+    'base': {
+      'white': '#fff',
+      'black': 'hsl(0, 0%, 20%)',
+      'gray': 'hsl(75, 14%, 95%)',
+      'yellow': 'hsl(46, 100%, 50%)',
+      'orange': 'hsl(22, 88%, 54%)',
+      'cyan': 'hsl(189, 62%, 66%)',
+      'blue': 'hsl(198, 77%, 48%)',
+      'green': 'hsl(79, 56%, 47%)',
+    }
+  }
+%}
+	</code></pre>
+	<h3>Python</h3>
+</div>
+
+
+						<aside class="notes">
+							JSON structure is curiously just like Sass Maps
+
+							Virtually all modern programming languages support them in one form or another.
+
+							I got in a deep discussion with a dev at Twitter about Sass
+							and ultimately got him to reconsider his position when I told him
+							that the addition of Sass maps aligns Sass with other programming languages
+							now opening the door for our styles (CSS) to talk to the browser
 						</aside>
 					</section>
 
 					<section>
-						<pre><code>
-							  "basecolors": {
-							    "black": "#333333",
-							    "pink": "#bf4040",
-							    "yellow": "#ffc300",
-							    "orange": "#f16e22",
-							    "cyan": "#73cede",
-							    "blue": "#1ca0d9",
-							    "green": "#90bb35"
-							  }
-						</code></pre>
-
-						<pre><code>
-							$colors: (
-							  'template': 'color.html',
-							  'basecolors': (
-							    'black': hsl(0, 0%, 20%),
-							    'pink': hsl(360, 50%, 50%),
-							    'yellow': hsl(46, 100%, 50%),
-							    'orange': hsl(22, 88%, 54%),
-							    'cyan': hsl(189, 62%, 66%),
-							    'blue': hsl(198, 77%, 48%),
-							    'green': hsl(79, 56%, 47%),
-							    )
-							);
-						</code></pre>
+						<h1>SassyJSON</h1>
+						<h2 class="orange">Sass-powered API for JSON</h2>
+						<p>
+							provides classic <code>json-encode</code> and <code>json-decode</code>
+							directly from your Sass files.
+						</p>
+						<p>We'll leave you the only judges of the point of this.</p>
 
 						<aside class="notes">
-							Maps are simple a key value pair. They exist in almost every
-							programming language. A collection of name/value pairs. In various
-							languages, this is realized as an object, record, struct, dictionary,
-							hash table, keyed list, or associative array.
+							I remember reading Hugo's article about SassyJSON and was excited to give it a
+							whirl. I had one of those all night stay up binges working with it.
 
-							JSON is a data format that is interchangeable with programming languages.
-							It is based on two These are universal data structures.
-							Virtually all modern programming languages support them in one form or another.
-							It makes sense that a data format that is interchangeable with
-							programming languages also be based on these structures.
-
-							Not to mention how databases built on JSON.
+							At the time I wanted it to work with Wintersmith, nodejs static site generator, and
+							Middleman. I was having an issue getting it to work with Wintersmith.
 						</aside>
-
 					</section>
 
-					<section data-state="sassyjson">
-						<h1><a href="https://github.com/ezekg/SassyExport">SassyExport</a></h1>
-						<p>Lightweight Compass extension that allows you
+					<section data-state="sassyexport">
+						<h1>SassyExport</h1>
+						<p class="orange">Lightweight Compass extension that allows you
 							to export an encoded Sass map into an external JSON file.</p>
 
-						<aside class="notes">
+<pre><code>
+$colors: (
+  'basecolors': (
+    'black': hsl(0, 0%, 20%),
+    'pink': hsl(360, 50%, 50%),
+    'yellow': hsl(46, 100%, 50%),
+    'orange': hsl(22, 88%, 54%),
+    'cyan': hsl(189, 62%, 66%),
+    'blue': hsl(198, 77%, 48%),
+    'green': hsl(79, 56%, 47%),
+    )
+);
 
+@include SassyExport("/contents/color.json", $colors, true);
+
+</code></pre>
+
+						<aside class="notes">
+							Then lovely SassNews site pointed me SassyExport.
+
+							I love the simplicity of SassyExport. It let's you export a sass map
+							to a JSON file.
+
+							I've found this to be extremely helpful for
+							creating color/typography pages in styleguides.
 						</aside>
 
 					</section>
 
-
-				</section>
-
-
-				<!-- Slide Group: HTML -->
-				<section>
-					<section data-state="html">
-						<header>
-							<h1>Materials matter</h1>
-							<h2>Pick a good templating language</h2>
-
-							<ul>
-								<li><a href="">Jade</a> <a href="http://jade-lang.com/reference/#mixins">mixins</a></li>
-								<li><a href="jinja.pocoo.org/docs/templates/">Jinja2</a> <a href="">macros</a></li>
-							</ul>
-						</header>
-
-						<aside class="notes">
- 							Structure. The foundation of our house. Without it there's nothing
- 							for our CSS to hook into. Prior to starting at OddBird I never
- 							thought much about my templating language. Usually just worked
- 							in the contrasts of the project.
-						</aside>
-					</section>
 
 					<section>
-						<h1>Jinja/Nunjucks</h1>
+						<h1>Sass <=> JSON <b class="orange">projects</b></h1>
+
+						<ul>
+							<li>
+								<a href="http://css-tricks.com/making-sass-talk-to-javascript-with-json/">
+									Making Sass talk to JavaScript with JSON
+								</a>
+							<li>
+								<a href="https://github.com/HugoGiraudel/SassyJSON">SassyJSON</a> by <a href="">Hugo Giraudel</a>
+								<a href="http://hugogiraudel.com/2014/01/20/json-in-sass/">Blog post</a>
+							</li>
+							<li><a href="https://github.com/vigetlabs/sass-json-vars">Import variables as JSON into Sass</a>
+								<a href="http://viget.com/extend/sharing-data-between-sass-and-javascript-with-json">
+									Sharing Data between Sass and JavaScript with JSON
+								</a></li>
+						</ul>
 
 						<aside class="notes">
+							Remember since JSON is a universal structure it can easily
+							be parsed and rendered/understood by all languages.
 
+							Check out the blog post and compass extension by Viget. They are
+							making JSON the canonical source.
 						</aside>
-
 					</section>
 
+				</section><!-- //JSON -->
+
+				<section data-state="revolutions-slide">
+					<h2>
+						Revolutions don't happen when a society adopts new technologies—
+						they happens when society adopts new behaviors.
+					</h2>
+
+					<aside class="notes">
+						People are asking if (Web) components is the next revolution for the web.
+						Perhaps yes. But we don't need to wait for it. Revolutions happen
+						when we adopt new behaviors. And it is possible to adopt new behaviors
+						of a componentized web now, in your code base.
+
+						Let's adopt a coponentized outlook.
+
+						Hope you go home and pay a bit more attention to your HTML and start
+						thinking about establishing single origins of truth. Start
+						to think about how you can encapsulate your work.
+					</aside>
 				</section>
 
-
-
-
-				<!-- Rhizomes/TAZ/Components -->
 				<section>
-					<h1>Rhizomes</h1>
-				</section>
+					<h1>Colophon</h1>
 
+					<ul>
+						<li>Front-End API Components talk from Lonely Planet</li>
+						<li>Rizzo Lonely Planet Styleguide</li>
+						<li>For more on <a href="">web components</a></li>
+						<li>
+							<a href="http://emberjs.com/guides/components/">
+								Ember.js intro to components
+							</a>
+						</li>
+						<li><a href="http://www.polymer-project.org/">Polymer Project</a></li>
+						<li>
+							<a href="https://github.com/ericam/accoutrement">Accoutrement</a>:
+							OddBirds sassy utilities
+						</li>
+						<li>
+							<a href="http://jade-lang.com/reference/#mixins">Jade mixins</a>
+						</li>
+					</ul>
+				</section>
 
 				<section data-state="thankyou-slide">
 					<h1>Thank You!</h1>
@@ -276,6 +643,9 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+		<script src="js/nunjucks.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/templates.js"></script>
 
 		<script>
 
@@ -297,6 +667,19 @@
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
 				// parallaxBackgroundSize: '2100px 900px',
+
+		    // The "normal" size of the presentation, aspect ratio will be preserved
+		    // when the presentation is scaled to fit different resolutions. Can be
+		    // specified using percentage units.
+		    width: 1440,
+		    height: 900,
+
+		    // Factor of the display size that should remain empty around the content
+		    margin: 0.1,
+
+		    // Bounds for smallest/largest possible scale to apply to content
+		    minScale: 0.2,
+		    maxScale: 1.0,
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
